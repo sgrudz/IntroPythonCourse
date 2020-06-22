@@ -46,7 +46,7 @@ while True:
     for i in range(9): # 9 max moves
         print("\nPlayer " + turn + "'s turn.\n")
         board_coordinates(board)
-        print("Which position would you like to choose?\n")
+        print("Which position would you like to choose, Player" + turn +"?\n")
         print_board(board)
         move = input()
         board[move] = turn #list
