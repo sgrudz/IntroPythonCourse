@@ -43,10 +43,7 @@ def areSpotsFull(pos, let): #pos is the position on the board
     if pos["1"] and pos["2"] and pos["3"] and pos["4"] and pos["5"] and pos["6"] and pos["7"] and pos["8"] and pos["9"] != " ": 
         print("All spots are full, it is a Cat's Game!")
         return True
-
-def isSpotOpen(pos, let):
-    print("spot is open")
-       
+      
 #Starting the Game
 
 print("Welcome to Tic-Tac-Toe!\n")
