@@ -10,10 +10,6 @@ board = {'1': ' ', '2': ' ', '3': ' ', #this makes the board a dictionary
          '4': ' ', '5': ' ', '6': ' ',
          '7': ' ', '8': ' ', '9': ' '}
 
-fake_board = {'1': 'a', '2': 'a', '3': 'a', #this makes the board a dictionary
-         '4': 'a', '5': 'a', '6': 'a',
-         '7': 'a', '8': 'a', '9': 'a'}
-
 turn = 'X' #used later to initiate start of game 
 
 #board_list_values = list(board.values()) makes the dictionary a list, can evaluate
