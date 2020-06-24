@@ -47,6 +47,9 @@ def areSpotsFull(pos, let): #pos is the position on the board
     if pos["1"] and pos["2"] and pos["3"] and pos["4"] and pos["5"] and pos["6"] and pos["7"] and pos["8"] and pos["9"] != " ": 
         print("All spots are full, it is a Cat's Game!")
         return True
+
+def isSpotOpen(pos, let):
+    print("spot is open")
        
 #Starting the Game
 
@@ -55,12 +58,12 @@ input("Press ENTER to begin\n")
 
 while True:
     for i in range(20): #needs for loop, needs to be bigger than 9 in case someone messes up        
-        #board_coordinates(board)
+        board_coordinates(board)
         print_board(board)
-        #areSpotsFull(board, turn)
+        areSpotsFull(board, turn)
         if areSpotsFull(board, turn) == True:
             break
-        print("\nPlayer " + turn + "'s turn. Which position would you like to choose?")
+        print("\nPlayer " + turn + "'s turn. Which position would you like to choose?\nPick a spot 1 - 9.")
         move = input()
         board[move] = turn #this assigns X or O to the position and makes it appear on the screen       
         if turn == "X": #this helps switch the turns between players
