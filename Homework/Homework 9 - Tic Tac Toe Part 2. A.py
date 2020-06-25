@@ -13,6 +13,7 @@ board = {'1': ' ', '2': ' ', '3': ' ', #this makes the board a dictionary
 turn = 'X' #used later to initiate start of game 
 
 #board_list_values = list(board.values()) makes the dictionary a list, can evaluate
+#print(board["1"], board["2"], board["3"], board["4"], board["5"], board["6"], board["7"], board["8"], board["9"])
 
 def board_coordinates(board):
     print("Position Coordinates of the Board:\n")
@@ -40,9 +41,15 @@ def isWinner(pos, let): #pos is the position on the board, let is letter (X or O
            (pos["7"] == let and pos["5"] == let and pos["3"] == let))
 
 def areSpotsFull(pos, let): #pos is the position on the board
-    if pos["1"] and pos["2"] and pos["3"] and pos["4"] and pos["5"] and pos["6"] and pos["7"] and pos["8"] and pos["9"] != " ": 
-        print("All spots are full, it is a Cat's Game!")
-        return True
+    return((pos["1"] != ' ') and 
+           (pos["2"] != ' ') and 
+           (pos["3"] != ' ') and 
+           (pos["4"] != ' ') and 
+           (pos["5"] != ' ') and 
+           (pos["6"] != ' ') and 
+           (pos["7"] != ' ') and 
+           (pos["8"] != ' ') and
+           (pos["9"] != ' ')) 
       
 #Starting the Game
 
@@ -53,8 +60,8 @@ while True:
     for i in range(20): #needs for loop, needs to be bigger than 9 in case someone messes up        
         board_coordinates(board)
         print_board(board)
-        areSpotsFull(board, turn)
         if areSpotsFull(board, turn) == True:
+            print("it is a cat's game")
             break
         print("\nPlayer " + turn + "'s turn. Which position would you like to choose?\nPick a spot 1 - 9.")
         move = input()
