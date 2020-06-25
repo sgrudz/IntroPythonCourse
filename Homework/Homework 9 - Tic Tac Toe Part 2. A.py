@@ -66,6 +66,9 @@ while True:
         print("\nPlayer " + turn + "'s turn. Which position would you like to choose?\nPick a spot 1 - 9.")
         move = input()
         board[move] = turn #this assigns X or O to the position and makes it appear on the screen       
+        if isWinner(board, turn) == True: #here, the board variable outlines a position, and turn is the X or O letter
+            print_board(board)
+            print("\nPlayer " + turn + " won!\n")
         if turn == "X": #this helps switch the turns between players
            turn = "O"
         else:
